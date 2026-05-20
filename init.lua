@@ -98,6 +98,7 @@ do
   vim.g.mapleader = ' '
   vim.g.maplocalleader = ' '
 
+
   -- Set to true if you have a Nerd Font installed and selected in the terminal
   vim.g.have_nerd_font = false
 
@@ -110,7 +111,7 @@ do
   vim.o.number = true
   -- You can also add relative line numbers, to help with jumping.
   --  Experiment for yourself to see if you like it!
-  -- vim.o.relativenumber = true
+  vim.o.relativenumber = true
 
   -- Enable mouse mode, can be useful for resizing splits for example!
   vim.o.mouse = 'a'
@@ -162,7 +163,7 @@ do
   vim.o.inccommand = 'split'
 
   -- Show which line your cursor is on
-  vim.o.cursorline = true
+  vim.o.cursorline = false
 
   -- Minimal number of screen lines to keep above and below the cursor.
   vim.o.scrolloff = 10
@@ -178,6 +179,10 @@ do
   -- Clear highlights on search when pressing <Esc> in normal mode
   --  See `:help hlsearch`
   vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+  -- custom
+  vim.keymap.set('i', 'jk', '<Esc>')
+  vim.keymap.set('n', '<leader>x', ':Ex<Enter>')
+
 
   -- Diagnostic Config & Keymaps
   --  See `:help vim.diagnostic.Opts`
